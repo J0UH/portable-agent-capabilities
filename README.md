@@ -24,7 +24,7 @@ A useful workflow should not depend on one model vendor or one CLI feature. The 
 ## System shape
 
 ```mermaid
-flowchart LR
+flowchart TD
     n0["Shared workflow"]
     n1["Portable skill"]
     n2["Harness adapter"]
