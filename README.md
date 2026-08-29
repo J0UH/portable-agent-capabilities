@@ -1,51 +1,52 @@
+[← All systems](https://github.com/J0UH) · [Agentic systems](https://github.com/J0UH/agentic-systems)
+
 <p align="center">
-  <img src="assets/hero.png" alt="Cross-harness agent tooling system illustration" width="100%" />
+  <img src="assets/hero.webp" alt="One shared violet component fits four differently shaped mechanical sockets" width="100%" />
 </p>
 
-# Cross-harness agent tooling
+# Portable agent capabilities
 
-Agent harnesses differ in their tools and interfaces, but the operating problems repeat: install the right context, route work, control authority, preserve state, verify outcomes, and make extensions portable.
-
-[Discuss a similar system](mailto:ju@jomena.group?subject=Discuss%20Cross-harness%20agent%20tooling) | [Book a technical call](mailto:ju@jomena.group?subject=Book%20a%20technical%20call%20about%20Cross-harness%20agent%20tooling)
+Agent products change quickly, but the useful work stays familiar: bring in the right context, route the task, control authority, preserve progress, and verify the outcome. Those capabilities should survive a change of tool or model.
 
 ## The engineering problem
 
-A useful workflow should not depend on one model vendor or one CLI feature. The work focused on the common primitives beneath Pi, Hermes, Globot, Bootstrap, Codex, and other harnesses, then adapted them where platform differences actually mattered.
+A useful workflow should not depend on one vendor or interface. The work focused on a stable operating contract, with small adaptations only where an environment truly behaves differently.
+
+
 
 ## What the system covers
 
-- Portable skills and instruction layers
-- Hook and lifecycle integration
-- Bootstrap and environment setup
-- Tool and permission boundaries
-- Cross-harness context and state patterns
-- Evaluation of new agent runtimes
+- Portable task and instruction patterns
+- Repeatable setup and handoff
+- Access and authority boundaries
+- Context and progress continuity
+- Consistent verification across environments
+- Evaluation of new tools without rewriting the workflow
 
 ## System shape
 
 ```mermaid
 flowchart TD
-    n0["Shared workflow"]
-    n1["Portable skill"]
-    n2["Harness adapter"]
-    n3["Tools and hooks"]
-    n4["State"]
-    n5["Verification"]
-    n0 --> n1
-    n1 --> n2
-    n2 --> n3
-    n3 --> n4
-    n4 --> n5
+accTitle: Portable agent capabilities
+accDescr: The workflow contract stays independent from a particular environment. Progress remains comparable, and inconsistent behaviour is repaired at the adaptation boundary instead of changing the useful capability.
+    workflow["Shared workflow contract"] --> skill["Portable skill"]
+    skill --> adapter{"Environment fits?"}
+    adapter -->|No| revise["Repair adaptation"]
+    adapter -->|Yes| tools["Bounded work"]
+    tools --> state["Comparable progress"]
+    state --> verify{"Outcome equivalent?"}
+    verify -->|No| revise
+    verify -->|Yes| evidence["Verified outcome"]
 ```
 
 ## Build notes
 
-- Keep the workflow contract independent from the harness adapter.
-- Treat installation and upgrades as part of product quality.
-- Attribute upstream runtimes while owning the integration patterns.
+- Keep the useful workflow independent from the current tool.
+- Treat setup and change as part of product quality.
+- Compare outcomes before declaring a workflow portable.
 
-<sub>This page covers hands-on adaptation and operating experience. Upstream projects remain credited to their maintainers and licences; private personal context and implementation stay private.</sub>
+<sub>Personal adaptation. Upstream authorship and licences are credited above. Public overview only; source code and private operating details are not included.</sub>
 
 ## Talk through a similar problem
 
-If you are trying to build, untangle, or ship a system in this area, [send me a note](mailto:ju@jomena.group?subject=I%20need%20help%20with%20Cross-harness%20agent%20tooling). If the problem needs a deeper technical conversation, [book a call by email](mailto:ju@jomena.group?subject=Book%20a%20technical%20call%20about%20Cross-harness%20agent%20tooling).
+Working on something similar? [Tell me about it](mailto:ju@jomena.group?subject=Portable%20agent%20capabilities).
