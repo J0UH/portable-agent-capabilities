@@ -1,20 +1,24 @@
-[← All systems](https://github.com/J0UH) · [Agentic systems](https://github.com/J0UH/agentic-systems)
-
-<p align="center">
-  <img src="assets/hero.webp" alt="One shared violet component fits four differently shaped mechanical sockets" width="100%" />
-</p>
+[← All work](https://github.com/J0UH) · [Agentic systems](https://github.com/J0UH/agentic-systems)
 
 # Portable agent capabilities
 
-Agent products change quickly, but the useful work stays familiar: bring in the right context, route the task, control authority, preserve progress, and verify the outcome. Those capabilities should survive a change of tool or model.
+Personal work on keeping useful agent workflows intact as tools, models, and environments change.
 
-## The engineering problem
+<img src="assets/hero-v2.webp" alt="Portable agent capabilities illustrated as a crafted architectural model, with exposed sketch and structural framing" width="100%" />
 
-A useful workflow should not depend on one vendor or interface. The work focused on a stable operating contract, with small adaptations only where an environment truly behaves differently.
+A tool changes, but the work often remains familiar. A task still needs the right context, a way to make progress, permission to act, and a check at the end.
 
+This work looks for the parts of that process that can remain stable. A workflow should be understandable enough to move between environments without rebuilding its logic around every new interface.
 
+## Portability has to include the handoff
 
-## What the system covers
+Setup is part of the experience. The next environment needs to understand the assignment, the progress already made, and which decisions are still waiting.
+
+I keep a common operating contract and make smaller adaptations where a tool genuinely behaves differently. Context, permissions, and verification need to travel with the task rather than remain implicit in one product.
+
+A familiar-looking prompt is not enough to establish portability. The useful test is whether the workflow still produces the intended result and handles the same interruptions and limits. That is what makes trying a new tool informative rather than starting over.
+
+## What the work covers
 
 - Portable task and instruction patterns
 - Repeatable setup and handoff
@@ -23,7 +27,8 @@ A useful workflow should not depend on one vendor or interface. The work focused
 - Consistent verification across environments
 - Evaluation of new tools without rewriting the workflow
 
-## System shape
+<details>
+<summary>A closer look at the technical flow</summary>
 
 ```mermaid
 flowchart TD
@@ -39,14 +44,13 @@ accDescr: The workflow contract stays independent from a particular environment.
     verify -->|Yes| evidence["Verified outcome"]
 ```
 
-## Build notes
+</details>
 
-- Keep the useful workflow independent from the current tool.
-- Treat setup and change as part of product quality.
-- Compare outcomes before declaring a workflow portable.
+## Related work
 
-<sub>Personal adaptation. Upstream authorship and licences are credited above. Public overview only; source code and private operating details are not included.</sub>
+- [Agentic systems](https://github.com/J0UH/agentic-systems)
+- [Personal AI employee](https://github.com/J0UH/personal-ai-employee)
 
-## Talk through a similar problem
+Working on a similar problem? [Tell me what you are building](mailto:ju@jomena.group?subject=Portable%20agent%20capabilities).
 
-Working on something similar? [Tell me about it](mailto:ju@jomena.group?subject=Portable%20agent%20capabilities).
+*This is a public account of the work. Source code and private operating details are not included in this repository.*
